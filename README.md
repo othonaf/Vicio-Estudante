@@ -58,7 +58,7 @@ DB_PORT = 5432
 4. Inicie o compose docker:
    
 ```bash
-docker-compose up --build
+docker-compose up -d
 ```
   
 5. Certifique-se de que o servidor Docker foi iniciado, se não tiver sido, inicie-o manualmente.
