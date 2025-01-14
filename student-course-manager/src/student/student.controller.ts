@@ -12,7 +12,7 @@ import { StudentService } from './student.service';
 import { Student } from '../entities/student.entity';
 import { CreateStudentDto } from '../DTO/create-student.dto';
 
-@Controller('student')
+@Controller('users')
 export class StudentController {
   private readonly logger = new Logger(StudentController.name);
 
