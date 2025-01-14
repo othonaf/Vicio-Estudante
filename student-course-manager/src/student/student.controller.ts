@@ -9,8 +9,8 @@ import {
   Post,
 } from '@nestjs/common';
 import { StudentService } from './student.service';
-import { Student } from 'src/entities/student.entity';
-import { CreateStudentDto } from 'src/DTO/create-student.dto';
+import { Student } from '../entities/student.entity';
+import { CreateStudentDto } from '../DTO/create-student.dto';
 
 @Controller('student')
 export class StudentController {

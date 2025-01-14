@@ -16,7 +16,7 @@ export class StudentService {
 
   constructor(
     @InjectRepository(Student)
-    private readonly employeeRepository: Repository<Student>,
+    private readonly studentRepository: Repository<Student>,
   ) {}
 
   private async hashPassword(password: string): Promise<string> {
@@ -27,7 +27,7 @@ export class StudentService {
   // Método de criar novo usuário:
   async createUser(createUser: CreateStudentDto): Promise<Student> {
     try {
-      const existingUser = await this.employeeRepository.findOne({
+      const existingUser = await this.studentRepository.findOne({
         where: { email: createUser.email },
       });
       if (existingUser) {
@@ -37,11 +37,11 @@ export class StudentService {
         throw new ConflictException('Usuário já cadastrado');
       }
       const hashedPassword = await this.hashPassword(createUser.password);
-      const newUser = this.employeeRepository.create({
+      const newUser = this.studentRepository.create({
         ...createUser,
         password: hashedPassword,
       });
-      const savedUser = await this.employeeRepository.save(newUser);
+      const savedUser = await this.studentRepository.save(newUser);
       this.logger.log(`Novo usuário criado com ID: ${savedUser.id}`);
 
       return savedUser;
@@ -54,7 +54,7 @@ export class StudentService {
   // Método de pesquisar usuário por ID:
   async findUserByID(id: number): Promise<any> {
     try {
-      const user = await this.employeeRepository.findOne({
+      const user = await this.studentRepository.findOne({
         where: { id },
       });
 

@@ -5,9 +5,12 @@ import { Student } from './entities/student.entity';
 import { Course } from './entities/courses.entity';
 import { Enrollment } from './entities/enrollments.entity';
 import { StudentService } from './student/student.service';
+import { CoursesService } from './courses/courses.service';
+import { CoursesController } from './courses/courses.controller';
 import { StudentController } from './student/student.controller';
 import { StudentModule } from './student/student.module';
 import { CoursesModule } from './courses/courses.module';
+import { EnrollmentsModule } from './enrollments/enrollments.module';
 
 @Module({
   imports: [
@@ -30,8 +33,9 @@ import { CoursesModule } from './courses/courses.module';
     }),
     TypeOrmModule.forFeature([Student, Course, Enrollment]),
     CoursesModule,
+    EnrollmentsModule,
   ],
-  controllers: [StudentController],
-  providers: [StudentService],
+  controllers: [StudentController, CoursesController],
+  providers: [StudentService, CoursesService],
 })
 export class AppModule {}
