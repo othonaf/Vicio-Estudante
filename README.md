@@ -73,6 +73,19 @@ https://documenter.getpostman.com/view/19721533/2sAYQXpDfD
 
 ## Testes Automatizados:
 
+* Para rodar os testes criados em Jest.js, rode o comando:
+
+```bash
+npm run test
+```
+* Ou, alternativamente, caso queira, rode cada arquivo de teste individualmente:</br>
+  Exemplo:
+  
+```bash
+npm test -- --testPathPattern="courses.controller.spec.ts"
+```
+
+
 
 
 
