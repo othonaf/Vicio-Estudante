@@ -49,11 +49,11 @@ npm install
 ```
 3. Nesta pasta crie um arquivo .env com SUAS CREDENCIAIS para as chaves abaixo:
    
-DB_DATABASE = vicio-manager
-DB_USERNAME = postgres
-DB_PASSWORD = sua_senha
-DB_HOST = localhost
-DB_PORT = 5432
+DB_DATABASE = vicio-manager</br>
+DB_USERNAME = postgres</br>
+DB_PASSWORD = sua_senha</br>
+DB_HOST = localhost</br>
+DB_PORT = 5432</br>
 
 4. Inicie o compose docker:
    
