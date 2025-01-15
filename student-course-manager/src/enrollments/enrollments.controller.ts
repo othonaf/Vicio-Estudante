@@ -9,8 +9,8 @@ import {
   Post,
 } from '@nestjs/common';
 import { EnrollmentsService } from './enrollments.service';
-import { Enrollment } from 'src/entities/enrollments.entity';
-import { CreateEnrollmentDto } from 'src/DTO/create-enrollment.dto';
+import { Enrollment } from '../entities/enrollments.entity';
+import { CreateEnrollmentDto } from '../DTO/create-enrollment.dto';
 
 @Controller('enrollments')
 export class EnrollmentsController {
